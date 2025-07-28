@@ -1,0 +1,121 @@
+/* client/src/App.css */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+.App {
+  padding: 20px;
+  max-width: 960px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 2.2em;
+}
+
+input[type="file"] {
+  display: block;
+  margin: 0 auto 25px auto;
+  padding: 12px;
+  border: 1px solid #c0d9e8;
+  border-radius: 6px;
+  background-color: #eaf4fb;
+  cursor: pointer;
+  font-size: 1.05em;
+  color: #34495e;
+}
+
+input[type="file"]:hover {
+  background-color: #dbe9f4;
+}
+
+.viewer-container {
+  margin-top: 30px;
+  padding: 25px;
+  border: 1px solid #e0e6e9;
+  border-radius: 8px;
+  background-color: #fcfdff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.loading-message, .error-message {
+  padding: 18px;
+  margin-top: 25px;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.loading-message {
+  background-color: #e6f7ff;
+  color: #007bff;
+  border: 1px solid #91d5ff;
+}
+
+.error-message {
+  background-color: #ffe6e6;
+  color: #dc3545;
+  border: 1px solid #ffadad;
+}
+
+.pdf-display {
+  margin-top: 25px;
+}
+
+.pdf-canvas-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: auto; /* Enables scrolling if PDF is larger than max-height */
+  max-height: 75vh; /* Limits the height of the PDF viewer area */
+  background-color: #fff;
+  display: flex; /* Centers pages */
+  flex-direction: column; /* Stacks pages vertically */
+  align-items: center; /* Centers pages horizontally */
+  padding: 10px 0; /* Some padding around pages */
+}
+
+/* Styles for react-pdf components */
+.react-pdf__Document {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Ensure document takes full width of its wrapper */
+}
+
+.react-pdf__Page {
+  margin-bottom: 15px; /* Space between pages */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Subtle shadow for pages */
+  border: 1px solid #eee; /* Light border around pages */
+}
+
+button {
+  background-color: #28a745; /* Green for clear/upload another */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+p {
+  font-size: 1.0em;
+  color: #555;
+  line-height: 1.6;
+}
