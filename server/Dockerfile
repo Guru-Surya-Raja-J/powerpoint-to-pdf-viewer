@@ -64,6 +64,9 @@
     # This copies from the build context's 'server' folder into the container's WORKDIR (/app/server)
     COPY . .
 
+    # --- ADD THIS LINE FOR VERBOSE LIBREOFFICE LOGGING ---
+    ENV SAL_LOG='+INFO +WARN +ERROR'
+
     # Expose the port your Node.js application listens on
     EXPOSE 3001
 
