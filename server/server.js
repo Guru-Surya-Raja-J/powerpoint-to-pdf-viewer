@@ -1,3 +1,4 @@
+    // server/server.js
 
     const express = require('express');
     const multer = require('multer');
@@ -10,6 +11,13 @@
     const port = 3001;
 
     app.use(cors());
+
+    // --- NEW TEST ENDPOINT ---
+    app.get('/test-json', (req, res) => {
+      console.log('[Test Endpoint] Received request to /test-json');
+      res.json({ message: 'Backend is alive and sending JSON!', timestamp: new Date() });
+    });
+    // --- END NEW TEST ENDPOINT ---
 
     // --- Directory Setup ---
     const uploadDir = path.join(__dirname, 'uploads');
